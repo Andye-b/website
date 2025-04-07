@@ -8,6 +8,10 @@
   --text-light: #F0EFED; /* Texto blanco sobre fondos oscuros */
   --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+.logo-container img {
+  height: 60px;
+  width: auto;
+}
 
 body {
   margin: 0;
@@ -19,11 +23,12 @@ body {
 
 header {
   background-color: var(--background-dark);
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 
 header img {
   height: 50px;
@@ -34,6 +39,7 @@ nav a {
   text-decoration: none;
   margin-left: 2rem;
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
 nav a:hover {
@@ -71,3 +77,5 @@ footer {
   padding: 1.5rem;
   margin-top: 3rem;
 }
+
+
