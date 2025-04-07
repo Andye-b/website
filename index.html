@@ -4,92 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parque Serra</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-    }
-    header {
-      background-color: #004643;
-      color: #ffffff;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #abd1c6;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
-    }
-    nav a {
-      color: #001e1d;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background-image: url('https://via.placeholder.com/1200x400'); /* Puedes cambiarlo por tu imagen */
-      background-size: cover;
-      background-position: center;
-      color: #ffffff;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    .hero h1 {
-      font-size: 48px;
-      margin: 0;
-    }
-    .hero p {
-      font-size: 24px;
-    }
-    .buttons {
-      margin-top: 20px;
-    }
-    .buttons a {
-      background-color: #004643;
-      color: #ffffff;
-      padding: 10px 20px;
-      text-decoration: none;
-      margin: 5px;
-      border-radius: 5px;
-      display: inline-block;
-    }
-    footer {
-      background-color: #004643;
-      color: #ffffff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- Aquí conectamos el CSS -->
 </head>
 <body>
+  <header>
+    <div class="container">
+      <img src="/ruta-a-tu-logo.png" alt="Parque Serra Logo">
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">Sobre Nosotros</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>Parque Serra</h1>
-</header>
+  <section id="inicio" class="container">
+    <h1>Bienvenido a Parque Serra</h1>
+    <p>Vive la aventura extrema en el mejor parque de MTB, senderismo y naturaleza de Querétaro.</p>
+    <button>Explorar más</button>
+  </section>
 
-<nav>
-  <a href="#actividades">Actividades</a>
-  <a href="#eventos">Eventos</a>
-  <a href="waiver.html">Waiver</a>
-  <a href="#contacto">Contacto</a>
-</nav>
+  <section id="sobre" class="container">
+    <h2>Sobre Nosotros</h2>
+    <p>Parque Serra es el espacio perfecto para los amantes del deporte, la naturaleza y la adrenalina. Te ofrecemos experiencias únicas y memorables.</p>
+  </section>
 
-<section class="hero">
-  <h1>Vive la Aventura</h1>
-  <p>Explora. Conquista. Disfruta en Parque Serra.</p>
-  <div class="buttons">
-    <a href="waiver.html">Registrarme</a>
-    <a href="#eventos">Ver eventos</a>
-  </div>
-</section>
+  <section id="eventos" class="container">
+    <h2>Próximos Eventos</h2>
+    <p>Próximamente: Clínicas de MTB, carreras de trail running, cursos de escalada y más. ¡Mantente atento!</p>
+  </section>
 
-<footer>
-  <p>Parque Serra &copy; 2025. Todos los derechos reservados.</p>
-</footer>
+  <section id="contacto" class="container">
+    <h2>Contacto</h2>
+    <p>Ubícanos en Querétaro, contáctanos en WhatsApp o síguenos en Instagram @parqueserra.</p>
+    <button>Enviar Mensaje</button>
+  </section>
 
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Parque Serra. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 </body>
 </html>
