@@ -1,4 +1,3 @@
-/* Variables principales */
 :root {
   --background-light: #F0EFED;
   --accent-color: #82513A;
@@ -10,16 +9,13 @@
   --font-main: 'Open Sans', sans-serif;
 }
 
-/* Estilos base */
 body {
   margin: 0;
   font-family: var(--font-main);
   background-color: var(--background-light);
   color: var(--text-color);
-  padding-top: 120px; /* Ajuste para barras fijas arriba */
 }
 
-/* Barra de anuncio */
 .announcement-bar {
   background-color: var(--background-dark);
   color: var(--text-light);
@@ -34,16 +30,14 @@ body {
   z-index: 1100;
 }
 
-/* Header */
 header {
   position: fixed;
   width: 100%;
-  top: 24px; /* 16px font-size anuncio + 8px padding */
+  top: calc(24px + 10px); /* Altura de announcement + margen */
   left: 0;
   z-index: 1000;
   background-color: transparent;
   transition: background-color 0.3s ease;
-  padding: 10px 0;
 }
 
 .main-header.scrolled {
@@ -86,7 +80,6 @@ header {
   transition: height 0.3s ease;
 }
 
-/* Navegación */
 nav {
   display: flex;
   gap: 15px;
@@ -128,7 +121,7 @@ nav a:hover {
   vertical-align: middle;
 }
 
-/* Hero */
+/* HERO section */
 .hero {
   background-image: url('assets/foto_7.jpeg');
   background-size: cover;
@@ -139,6 +132,8 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-top: 140px; /* Aquí se separa del header */
+  margin-top: calc(24px + 80px); /* Altura announcement + nav */
   color: var(--text-color);
 }
 
@@ -173,32 +168,63 @@ nav a:hover {
   background-color: var(--accent-dark);
 }
 
-/* Secciones generales */
+/* SECTIONS */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--background-dark);
+.grid-section {
+  padding: 60px 20px;
 }
 
-button {
-  background-color: var(--accent-color);
-  color: var(--text-light);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+.grid-section h2 {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-button:hover {
-  background-color: var(--accent-dark);
+/* Para cuadrículas de imágenes */
+.grid-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
-/* Footer */
+.grid-images img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Para botones de Visítanos */
+.grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.visit-button {
+  background-color: white;
+  border: 1px solid var(--background-secondary);
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  text-align: center;
+  padding: 10px;
+  text-transform: capitalize;
+  border-radius: 4px;
+}
+
+/* FOOTER */
 footer {
   background-color: var(--background-dark);
   color: var(--text-light);
@@ -211,25 +237,4 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 20px;
-  text-align: center;
-}
-
-/* Redes sociales */
-.social-icons {
-  margin-top: 15px;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  display: inline-block;
-}
-
-.social-icons img {
-  height: 24px;
-  filter: brightness(90%);
-  transition: filter 0.3s ease;
-}
-
-.social-icons img:hover {
-  filter: brightness(120%);
 }
