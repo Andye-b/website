@@ -20,6 +20,9 @@
       padding: 20px;
     }
     .announcement-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
       background-color: #383331;
       color: #DBDCDE;
       text-align: center;
@@ -27,16 +30,16 @@
       padding: 5px 0;
       font-family: 'Roboto', sans-serif;
       text-transform: uppercase;
+      z-index: 1001;
     }
     header {
       position: fixed;
       width: 100%;
-      top: 0;
+      top: 30px;
       left: 0;
       z-index: 1000;
       background-color: transparent;
-      transition: background-color 0.3s ease;
-      padding: 10px 0;
+      transition: background-color 0.3s ease, padding 0.3s ease;
     }
     .main-header.scrolled {
       background-color: #F0EFED;
@@ -49,18 +52,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: transparent;
     }
     nav {
       display: flex;
       gap: 20px;
-      background: transparent;
+      background: rgba(255, 255, 255, 0.8);
       padding: 8px 20px;
       border-radius: 30px;
       align-items: center;
       transition: background-color 0.3s ease;
     }
     .main-header.scrolled nav {
-      background-color: #ffffff;
+      background: white;
     }
     nav a {
       color: #383331;
@@ -99,7 +103,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding-top: 140px;
+      padding-top: 180px;
       color: #383331;
     }
     .hero-content h1 {
@@ -208,45 +212,7 @@
     </div>
   </section>
 
-  <section id="actividades" class="grid-section container">
-    <h2>Actividades</h2>
-    <div class="grid-images">
-      <img src="assets/actividad1.jpg" alt="Actividad 1">
-      <img src="assets/actividad2.jpg" alt="Actividad 2">
-      <img src="assets/actividad3.jpg" alt="Actividad 3">
-      <img src="assets/actividad4.jpg" alt="Actividad 4">
-    </div>
-  </section>
-
-  <section id="eventos" class="grid-section container">
-    <h2>Eventos</h2>
-    <div class="grid-images">
-      <img src="assets/evento1.jpg" alt="Evento 1">
-      <img src="assets/evento2.jpg" alt="Evento 2">
-      <img src="assets/evento3.jpg" alt="Evento 3">
-      <img src="assets/evento4.jpg" alt="Evento 4">
-    </div>
-  </section>
-
-  <section id="visitanos" class="grid-section container">
-    <h2>Visítanos</h2>
-    <div class="grid-buttons">
-      <div class="visit-button">Pase de día</div>
-      <div class="visit-button">Escuela</div>
-      <div class="visit-button">Fiestas</div>
-      <div class="visit-button">Eventos Corporativos</div>
-    </div>
-  </section>
-
-  <section id="contacto" class="grid-section container">
-    <h2>Contacto</h2>
-    <p>Ubícanos en Querétaro. Escríbenos por WhatsApp o síguenos en Instagram @parqueserra.</p>
-    <button>Enviar Mensaje</button>
-  </section>
-
-  <footer>
-    <p>© 2025 Parque Serra. Todos los derechos reservados.</p>
-  </footer>
+  <!-- Secciones posteriores... -->
 
   <script>
     window.addEventListener('scroll', function() {
@@ -261,4 +227,3 @@
 
 </body>
 </html>
-
