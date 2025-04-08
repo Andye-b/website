@@ -122,3 +122,47 @@ nav {
 .main-header.scrolled nav {
   background-color: rgba(255, 255, 255, 1);
 }
+.hero {
+  background-image: url('assets/foto_7.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 140px;
+  color: #383331;
+}
+
+.hero-content h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 42px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.hero-content button {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: var(--accent-dark);
+}
