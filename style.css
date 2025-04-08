@@ -33,12 +33,13 @@ body {
 header {
   position: fixed;
   width: 100%;
-  top: calc(24px); /* altura de la barra de anuncio */
+  top: calc(21px); /* altura de la barra de anuncio */
   left: 0;
   z-index: 1000;
   background-color: transparent;
   transition: background-color 0.3s ease;
-  padding: 10px 0;
+  padding: 0px 0;
+  
 }
 
 .main-header.scrolled {
