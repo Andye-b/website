@@ -4,19 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parque Serra</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Barra de Anuncio -->
   <div class="announcement-bar">
     ¡Oferta Promoción!
   </div>
 
-  <!-- Header Fijo -->
   <header class="main-header">
     <div class="header-inner">
       <div class="left">
@@ -40,7 +38,6 @@
     </div>
   </header>
 
-  <!-- Sección Hero -->
   <section id="inicio" class="hero">
     <div class="hero-content">
       <h1>Vive la aventura en Parque Serra</h1>
@@ -51,8 +48,7 @@
     </div>
   </section>
 
-  <!-- Sección Actividades -->
-  <section id="actividades" class="container">
+  <section id="actividades" class="grid-section container">
     <h2>Actividades</h2>
     <div class="grid-images">
       <img src="assets/foto_7.jpeg" alt="Actividad 1">
@@ -62,8 +58,7 @@
     </div>
   </section>
 
-  <!-- Sección Eventos -->
-  <section id="eventos" class="container">
+  <section id="eventos" class="grid-section container">
     <h2>Eventos</h2>
     <div class="grid-images">
       <img src="assets/foto_7.jpeg" alt="Evento 1">
@@ -73,8 +68,7 @@
     </div>
   </section>
 
-  <!-- Sección Visítanos -->
-  <section id="visitanos" class="container">
+  <section id="visitanos" class="grid-section container">
     <h2>Visítanos</h2>
     <div class="grid-buttons">
       <div class="visit-button">Pase de día</div>
@@ -84,21 +78,18 @@
     </div>
   </section>
 
-  <!-- Sección Contacto -->
-  <section id="contacto" class="container">
+  <section id="contacto" class="grid-section container">
     <h2>Contacto</h2>
     <p>Ubícanos en Querétaro. Escríbenos por WhatsApp o síguenos en Instagram @parqueserra.</p>
     <button>Enviar Mensaje</button>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <p>© 2025 Parque Serra. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- Script para cambiar el background del Header al hacer scroll -->
   <script>
     window.addEventListener('scroll', function () {
       const header = document.querySelector('header');
