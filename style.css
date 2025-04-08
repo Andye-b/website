@@ -297,13 +297,89 @@ footer {
 footer {
   background-color: var(--background-dark);
   color: var(--text-light);
-  text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
   font-size: 14px;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  height: 70px;
+  margin-right: 40px;
+}
+
+.footer-links {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  margin: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-partners {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-partners h4 {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.partners-logos img {
+  height: 40px;
+  object-fit: contain;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-light);
 }
