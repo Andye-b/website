@@ -139,7 +139,7 @@ nav a:hover {
   align-items: center;
   text-align: center;
   padding-top: 21px; /* Pequeño padding para que el contenido no se tape con nav */
-  margin-top: 0; /* Quitar cualquier margin-top */
+  margin-top: 20; /* Quitar cualquier margin-top */
   color: var(--text-color);
   position: relative;
   z-index: 1;
