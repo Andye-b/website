@@ -9,66 +9,157 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    h1, h2, h3, h4, h5, h6 {
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #F0EFED;
+      color: #383331;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .announcement-bar {
+      background-color: #383331;
+      color: #DBDCDE;
+      text-align: center;
+      font-size: 14px;
+      padding: 5px;
+    }
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      transition: background-color 0.3s;
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+    }
+    .header-inner {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+    .main-header.scrolled {
+      background-color: #F0EFED;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: #383331;
+      text-decoration: none;
+      font-family: 'Open Sans', sans-serif;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .logo-container img {
+      height: 40px;
+    }
+    .user-icons a {
+      margin-left: 15px;
+      color: #383331;
+      text-decoration: none;
+    }
+    .user-icons img {
+      height: 20px;
+      vertical-align: middle;
+    }
+    .hero {
+      background-image: url('assets/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #383331;
+      padding-top: 150px;
+    }
+    .hero-content h1 {
       font-family: 'Roboto', sans-serif;
       text-transform: uppercase;
+      font-size: 48px;
+      margin-bottom: 10px;
     }
-
-    p, a, button, nav a {
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .hero-content button {
+      background-color: #82513A;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
       font-family: 'Open Sans', sans-serif;
-      text-transform: none;
-    }
-
-    p, a, button {
       text-transform: capitalize;
     }
-
-    .gallery-section {
-      padding: 4rem 2rem;
+    .grid-section {
+      padding: 60px 0;
+      text-align: center;
     }
-
-    .gallery-grid {
+    .grid-images {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 20px;
     }
-
-    .gallery-grid img, .visit-button {
+    .grid-images img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
-      background-color: #f0efed;
+      height: auto;
+      background-color: #383331;
+    }
+    .grid-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .visit-button {
+      background-color: white;
+      border: 1px solid #DBDCDE;
+      padding: 30px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
-      color: #383331;
-      font-weight: bold;
-      text-align: center;
-      border: 1px solid #dbdcde;
-      transition: transform 0.3s ease;
+      height: 150px;
     }
-
-    .gallery-grid img:hover, .visit-button:hover {
-      transform: scale(1.05);
+    footer {
+      background-color: #383331;
+      color: #DBDCDE;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Barra de anuncios -->
   <div class="announcement-bar">
     <p>¡Oferta Promoción!</p>
   </div>
 
-  <!-- Barra de navegación -->
   <header class="main-header">
     <div class="header-inner">
       <div class="logo-container">
         <img src="assets/logo.png" alt="Parque Serra Logo">
       </div>
-      <nav class="nav-menu">
+      <nav>
         <a href="#conocenos">Conócenos</a>
         <a href="#actividades">Actividades</a>
         <a href="#ubicacion">Ubicación</a>
@@ -82,22 +173,19 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section id="inicio" class="hero">
-    <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Vive la aventura en Parque Serra</h1>
       <p>MTB - Senderismo - Naturaleza</p>
-      <button onclick="document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' })">
+      <button onclick="document.getElementById('actividades').scrollIntoView({ behavior: 'smooth' })">
         Reserva tu experiencia
       </button>
     </div>
   </section>
 
-  <!-- Actividades -->
-  <section id="actividades" class="gallery-section">
+  <section id="actividades" class="grid-section container">
     <h2>Actividades</h2>
-    <div class="gallery-grid">
+    <div class="grid-images">
       <img src="assets/actividad1.jpg" alt="Actividad 1">
       <img src="assets/actividad2.jpg" alt="Actividad 2">
       <img src="assets/actividad3.jpg" alt="Actividad 3">
@@ -105,10 +193,9 @@
     </div>
   </section>
 
-  <!-- Eventos -->
-  <section id="eventos" class="gallery-section">
+  <section id="eventos" class="grid-section container">
     <h2>Eventos</h2>
-    <div class="gallery-grid">
+    <div class="grid-images">
       <img src="assets/evento1.jpg" alt="Evento 1">
       <img src="assets/evento2.jpg" alt="Evento 2">
       <img src="assets/evento3.jpg" alt="Evento 3">
@@ -116,10 +203,9 @@
     </div>
   </section>
 
-  <!-- Visítanos -->
-  <section id="visitanos" class="gallery-section">
+  <section id="visitanos" class="grid-section container">
     <h2>Visítanos</h2>
-    <div class="gallery-grid">
+    <div class="grid-buttons">
       <div class="visit-button">Pase de día</div>
       <div class="visit-button">Escuela</div>
       <div class="visit-button">Fiestas</div>
@@ -127,8 +213,7 @@
     </div>
   </section>
 
-  <!-- Contacto -->
-  <section id="contacto" class="container">
+  <section id="contacto" class="grid-section container">
     <h2>Contacto</h2>
     <p>Ubícanos en Querétaro. Escríbenos por WhatsApp o síguenos en Instagram @parqueserra.</p>
     <button>Enviar Mensaje</button>
@@ -140,7 +225,7 @@
 
   <script>
     window.addEventListener('scroll', function() {
-      const header = document.querySelector('.main-header');
+      const header = document.querySelector('header');
       if (window.scrollY > 50) {
         header.classList.add('scrolled');
       } else {
@@ -151,5 +236,3 @@
 
 </body>
 </html>
-
-
