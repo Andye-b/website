@@ -6,8 +6,7 @@
   <title>Parque Serra</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/logo.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -25,7 +24,9 @@
       color: #DBDCDE;
       text-align: center;
       font-size: 14px;
-      padding: 5px;
+      padding: 5px 0;
+      font-family: 'Roboto', sans-serif;
+      text-transform: uppercase;
     }
     header {
       position: fixed;
@@ -33,18 +34,17 @@
       top: 0;
       left: 0;
       z-index: 1000;
-      transition: background-color 0.3s;
-      display: flex;
-      justify-content: center;
       background-color: transparent;
+      transition: background-color 0.3s, padding 0.3s;
+      padding: 10px 0;
     }
     .header-inner {
-      width: 100%;
       max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 10px 20px;
+      align-items: center;
     }
     .main-header.scrolled {
       background-color: #F0EFED;
@@ -52,22 +52,29 @@
     nav {
       display: flex;
       gap: 20px;
+      background: #F0EFED;
+      padding: 8px 20px;
+      border-radius: 30px;
+      align-items: center;
     }
     nav a {
       color: #383331;
       text-decoration: none;
       font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
     }
     nav a:hover {
       text-decoration: underline;
     }
     .logo-container img {
-      height: 40px;
+      height: 45px;
     }
     .user-icons a {
       margin-left: 15px;
       color: #383331;
       text-decoration: none;
+      font-size: 14px;
     }
     .user-icons img {
       height: 20px;
@@ -77,39 +84,46 @@
       background-image: url('assets/hero.jpg');
       background-size: cover;
       background-position: center;
-      height: 90vh;
+      height: 85vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding-top: 120px;
       color: #383331;
-      padding-top: 150px;
     }
     .hero-content h1 {
       font-family: 'Roboto', sans-serif;
+      font-size: 42px;
       text-transform: uppercase;
-      font-size: 48px;
       margin-bottom: 10px;
     }
     .hero-content p {
-      font-size: 20px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      text-transform: capitalize;
       margin-bottom: 20px;
     }
     .hero-content button {
       background-color: #82513A;
-      color: white;
+      color: #fff;
       border: none;
       padding: 10px 20px;
       font-size: 16px;
-      cursor: pointer;
       border-radius: 5px;
+      cursor: pointer;
       font-family: 'Open Sans', sans-serif;
       text-transform: capitalize;
     }
     .grid-section {
-      padding: 60px 0;
+      padding: 60px 20px;
       text-align: center;
+    }
+    .grid-section h2 {
+      font-family: 'Roboto', sans-serif;
+      text-transform: uppercase;
+      font-size: 28px;
     }
     .grid-images {
       display: grid;
@@ -119,7 +133,8 @@
     }
     .grid-images img {
       width: 100%;
-      height: auto;
+      height: 200px;
+      object-fit: cover;
       background-color: #383331;
     }
     .grid-buttons {
@@ -132,12 +147,13 @@
       background-color: white;
       border: 1px solid #DBDCDE;
       padding: 30px;
-      font-family: 'Open Sans', sans-serif;
       font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 150px;
+      text-transform: capitalize;
     }
     footer {
       background-color: #383331;
@@ -151,7 +167,7 @@
 <body>
 
   <div class="announcement-bar">
-    <p>¡Oferta Promoción!</p>
+    ¡Oferta Promoción!
   </div>
 
   <header class="main-header">
