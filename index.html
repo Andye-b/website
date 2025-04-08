@@ -47,7 +47,14 @@
       background-color: #F0EFED;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     nav {
       display: flex;
       gap: 20px;
@@ -176,34 +183,24 @@
     ¡Oferta Promoción!
   </div>
 
-  </header>
   <header class="main-header">
-  <div class="header-inner">
-  <div class="left">
-    <div class="logo-container">
-      <img src="assets/logo.png" alt="Parque Serra Logo">
+    <div class="header-inner">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Parque Serra Logo">
+      </div>
+      <nav>
+        <a href="#conocenos">Conócenos</a>
+        <a href="#actividades">Actividades</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="user-icons">
+        <a href="#login">Login</a>
+        <a href="#buscar"><img src="assets/search-icon.svg" alt="Buscar"></a>
+      </div>
     </div>
-  </div>
-  
-  <div class="center">
-    <nav>
-      <a href="#conocenos">Conócenos</a>
-      <a href="#actividades">Actividades</a>
-      <a href="#ubicacion">Ubicación</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
-  
-  <div class="right">
-    <div class="user-icons">
-      <a href="#login">Login</a>
-      <a href="#buscar"><img src="assets/search-icon.svg" alt="Buscar"></a>
-    </div>
-  </div>
-</div>
-</header>
-
+  </header>
 
   <section id="inicio" class="hero">
     <div class="hero-content">
