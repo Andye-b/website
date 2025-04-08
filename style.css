@@ -113,6 +113,7 @@ button:hover {
   justify-content: flex-end;
   align-items: center;
 }
+
 /* Si quieres opacidad para la pildora */
 nav {
   background-color: rgba(255, 255, 255, 0.3);
@@ -121,23 +122,3 @@ nav {
 .main-header.scrolled nav {
   background-color: rgba(255, 255, 255, 1);
 }
-.left, .center, .right {
-  display: flex;
-  align-items: center;
-}
-
-.left {
-  justify-content: flex-start;
-  flex: 1;
-}
-
-.center {
-  justify-content: center;
-  flex: 2;
-}
-
-.right {
-  justify-content: flex-end;
-  flex: 1;
-}
-
