@@ -88,8 +88,12 @@ nav {
   padding: 8px 20px;
   border-radius: 30px;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0); /* SEMI-TRANSPARENTE al inicio */
   transition: background-color 0.3s ease;
+}
+
+.main-header.scrolled nav {
+  background-color: #ffffff; /* BLANCO sólido cuando scrollea */
 }
 
 .main-header.scrolled nav {
