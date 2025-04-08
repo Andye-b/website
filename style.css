@@ -15,7 +15,7 @@ body {
   font-family: var(--font-main);
   background-color: var(--background-light);
   color: var(--text-color);
-  padding-top: 180px; /* espacio suficiente para anuncio + nav */
+  padding-top: 0px; /* espacio suficiente para anuncio + nav */
 }
 
 .announcement-bar {
