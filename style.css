@@ -70,12 +70,30 @@ button:hover {
   padding: 2rem;
 }
 
-footer {
-  background-color: var(--background-dark);
-  color: var(--text-light);
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
   text-align: center;
-  padding: 1.5rem;
-  margin-top: 3rem;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  height: 24px;
+  filter: brightness(90%);
+  transition: filter 0.3s ease;
+}
+
+.social-icons img:hover {
+  filter: brightness(120%);
 }
 
 
