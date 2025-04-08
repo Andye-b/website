@@ -37,8 +37,6 @@ header img {
 nav a {
   color: var(--text-light);
   text-decoration: none;
-  margin-left: 2rem;
-  allign: center;
   font-weight: bold;
   font-size: 1.1rem;
 }
