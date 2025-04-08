@@ -20,9 +20,6 @@
       padding: 20px;
     }
     .announcement-bar {
-      position: fixed;
-      top: 0;
-      width: 100%;
       background-color: #383331;
       color: #DBDCDE;
       text-align: center;
@@ -30,7 +27,10 @@
       padding: 5px 0;
       font-family: 'Roboto', sans-serif;
       text-transform: uppercase;
-      z-index: 1001;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1100;
     }
     header {
       position: fixed;
@@ -39,7 +39,8 @@
       left: 0;
       z-index: 1000;
       background-color: transparent;
-      transition: background-color 0.3s ease, padding 0.3s ease;
+      transition: background-color 0.3s ease;
+      padding: 10px 0;
     }
     .main-header.scrolled {
       background-color: #F0EFED;
@@ -52,19 +53,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: transparent;
     }
     nav {
       display: flex;
       gap: 20px;
-      background: rgba(255, 255, 255, 0.8);
+      background: transparent;
       padding: 8px 20px;
       border-radius: 30px;
       align-items: center;
       transition: background-color 0.3s ease;
     }
     .main-header.scrolled nav {
-      background: white;
+      background-color: #ffffff;
     }
     nav a {
       color: #383331;
@@ -103,7 +103,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding-top: 180px;
+      padding-top: 140px;
       color: #383331;
     }
     .hero-content h1 {
@@ -130,42 +130,40 @@
       text-transform: capitalize;
     }
     .grid-section {
-      padding: 60px 20px;
-      text-align: center;
+      padding: 60px 0 30px 0;
+      text-align: left;
     }
     .grid-section h2 {
       font-family: 'Roboto', sans-serif;
       text-transform: uppercase;
       font-size: 28px;
+      padding-left: 20px;
     }
-    .grid-images {
+    .grid-images, .grid-buttons {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-top: 20px;
+      gap: 8px;
+      margin: 20px;
     }
-    .grid-images img {
+    .grid-images img, .visit-button {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
       background-color: #383331;
-    }
-    .grid-buttons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-top: 20px;
+      border-radius: 4px;
     }
     .visit-button {
       background-color: white;
       border: 1px solid #DBDCDE;
-      padding: 30px;
-      font-size: 18px;
+      color: #383331;
       font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 150px;
+      height: 180px;
+      text-align: center;
+      padding: 10px;
       text-transform: capitalize;
     }
     footer {
@@ -212,7 +210,45 @@
     </div>
   </section>
 
-  <!-- Secciones posteriores... -->
+  <section id="actividades" class="grid-section container">
+    <h2>Actividades</h2>
+    <div class="grid-images">
+      <img src="assets/actividad1.jpg" alt="Actividad 1">
+      <img src="assets/actividad2.jpg" alt="Actividad 2">
+      <img src="assets/actividad3.jpg" alt="Actividad 3">
+      <img src="assets/actividad4.jpg" alt="Actividad 4">
+    </div>
+  </section>
+
+  <section id="eventos" class="grid-section container">
+    <h2>Eventos</h2>
+    <div class="grid-images">
+      <img src="assets/evento1.jpg" alt="Evento 1">
+      <img src="assets/evento2.jpg" alt="Evento 2">
+      <img src="assets/evento3.jpg" alt="Evento 3">
+      <img src="assets/evento4.jpg" alt="Evento 4">
+    </div>
+  </section>
+
+  <section id="visitanos" class="grid-section container">
+    <h2>Visítanos</h2>
+    <div class="grid-buttons">
+      <div class="visit-button">Pase de día</div>
+      <div class="visit-button">Escuela</div>
+      <div class="visit-button">Fiestas</div>
+      <div class="visit-button">Eventos Corporativos</div>
+    </div>
+  </section>
+
+  <section id="contacto" class="grid-section container">
+    <h2>Contacto</h2>
+    <p>Ubícanos en Querétaro. Escríbenos por WhatsApp o síguenos en Instagram @parqueserra.</p>
+    <button>Enviar Mensaje</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Parque Serra. Todos los derechos reservados.</p>
+  </footer>
 
   <script>
     window.addEventListener('scroll', function() {
@@ -227,4 +263,3 @@
 
 </body>
 </html>
-
