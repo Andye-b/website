@@ -94,25 +94,6 @@ button:hover {
 .social-icons img:hover {
   filter: brightness(120%);
 }
-.left {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-.center {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
 
 /* Si quieres opacidad para la pildora */
 nav {
@@ -121,5 +102,24 @@ nav {
 
 .main-header.scrolled nav {
   background-color: rgba(255, 255, 255, 1);
+}
+.left, .center, .right {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.center {
+  justify-content: center;
+  flex: 2;
+}
+
+.right {
+  justify-content: flex-end;
+  flex: 1;
 }
 
