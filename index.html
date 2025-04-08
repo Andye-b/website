@@ -1,107 +1,247 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parque Serra</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/logo.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
+:root {
+  --background-light: #F0EFED;
+  --accent-color: #82513A;
+  --background-secondary: #DBDCDE;
+  --accent-dark: #474B3C;
+  --background-dark: #383331;
+  --text-color: #383331;
+  --text-light: #F0EFED;
+  --font-main: 'Open Sans', sans-serif;
+}
 
-<body>
+/* Reset general */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--background-light);
+  color: var(--text-color);
+  padding-top: 120px; /* para compensar anuncio + header fijo */
+}
 
-  <div class="announcement-bar">
-    ¡Oferta Promoción!
-  </div>
+/* Barra de promoción arriba */
+.announcement-bar {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  text-align: center;
+  font-size: 16px;
+  padding: 5px 0;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1100;
+}
 
-  <header class="main-header">
-    <div class="header-inner">
-      <div class="left">
-        <div class="logo-container">
-          <img src="assets/logo.png" alt="Parque Serra Logo">
-        </div>
-      </div>
-      <div class="center">
-        <nav>
-          <a href="#conocenos">Conócenos</a>
-          <a href="#actividades">Actividades</a>
-          <a href="#ubicacion">Ubicación</a>
-          <a href="#eventos">Eventos</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
-      </div>
-      <div class="right user-icons">
-        <a href="#login">Login</a>
-        <a href="#buscar"><img src="assets/search-icon.svg" alt="Buscar"></a>
-      </div>
-    </div>
-  </header>
+/* Header principal */
+header {
+  position: fixed;
+  width: 100%;
+  top: 34px; /* 16px anuncio + 10px paddings aproximados */
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  padding: 10px 0;
+}
 
-  <main>
-    <section id="inicio" class="hero">
-      <div class="hero-content">
-        <h1>Vive la aventura en Parque Serra</h1>
-        <p>MTB - Senderismo - Naturaleza</p>
-        <button onclick="document.getElementById('actividades').scrollIntoView({ behavior: 'smooth' })">
-          Reserva tu experiencia
-        </button>
-      </div>
-    </section>
+/* Cuando se hace scroll */
+.main-header.scrolled {
+  background-color: var(--background-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    <section id="actividades" class="grid-section container">
-      <h2>Actividades</h2>
-      <div class="grid-images">
-        <img src="assets/foto_7.jpeg" alt="Actividad 1">
-        <img src="assets/foto_7.jpeg" alt="Actividad 2">
-        <img src="assets/foto_7.jpeg" alt="Actividad 3">
-        <img src="assets/foto_7.jpeg" alt="Actividad 4">
-      </div>
-    </section>
+/* Contenedor interno del header */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    <section id="eventos" class="grid-section container">
-      <h2>Eventos</h2>
-      <div class="grid-images">
-        <img src="assets/foto_7.jpeg" alt="Evento 1">
-        <img src="assets/foto_7.jpeg" alt="Evento 2">
-        <img src="assets/foto_7.jpeg" alt="Evento 3">
-        <img src="assets/foto_7.jpeg" alt="Evento 4">
-      </div>
-    </section>
+/* Separación del logo, menú y login */
+.left, .center, .right {
+  display: flex;
+  align-items: center;
+}
 
-    <section id="visitanos" class="grid-section container">
-      <h2>Visítanos</h2>
-      <div class="grid-buttons">
-        <div class="visit-button">Pase de día</div>
-        <div class="visit-button">Escuela</div>
-        <div class="visit-button">Fiestas</div>
-        <div class="visit-button">Eventos Corporativos</div>
-      </div>
-    </section>
+.left {
+  flex: 1;
+  justify-content: flex-start;
+}
 
-    <section id="contacto" class="grid-section container">
-      <h2>Contacto</h2>
-      <p>Ubícanos en Querétaro. Escríbenos por WhatsApp o síguenos en Instagram @parqueserra.</p>
-      <button>Enviar Mensaje</button>
-    </section>
-  </main>
+.center {
+  flex: 2;
+  justify-content: center;
+}
 
-  <footer>
-    <div class="footer-container">
-      <p>© 2025 Parque Serra. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+.right {
+  flex: 1;
+  justify-content: flex-end;
+}
 
-  <script>
-    window.addEventListener('scroll', function () {
-      const header = document.querySelector('header');
-      if (window.scrollY > window.innerHeight - 100) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-  </script>
+/* Logo */
+.logo-container img {
+  height: 50px;
+  width: auto;
+  transition: height 0.3s ease;
+}
 
-</body>
-</html>
+/* Menú de navegación */
+nav {
+  display: flex;
+  gap: 15px;
+  padding: 6px 20px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Cuando scrolleamos, nav cambia */
+.main-header.scrolled nav {
+  background-color: #ffffff;
+}
+
+/* Estilo de los links */
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Iconos de login y search */
+.user-icons a {
+  margin-left: 15px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+.user-icons img {
+  height: 20px;
+  vertical-align: middle;
+}
+
+/* Hero section */
+.hero {
+  background-image: url('assets/foto_7.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Contenido dentro del hero */
+.hero-content h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 42px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.hero-content button {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: var(--accent-dark);
+}
+
+/* Secciones generales */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Títulos de secciones */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--background-dark);
+}
+
+/* Imágenes en cuadrícula */
+.grid-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.grid-images img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Botones de visita */
+.grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.visit-button {
+  background-color: #ffffff;
+  border: 1px solid var(--background-secondary);
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+
+/* Footer */
+footer {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* Footer interno */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+}
