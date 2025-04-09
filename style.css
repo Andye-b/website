@@ -136,8 +136,8 @@ nav a:hover {
   height: 85vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding-top: 21px; /* Pequeño padding para que el contenido no se tape con nav */
   margin-top: 0; /* Quitar cualquier margin-top */
