@@ -267,9 +267,10 @@ footer {
   margin-bottom: 30px;
 }
 
-.footer-logo img {
-  height: 120px;
-  margin-right: 40px;
+.footer-logo svg {
+  height: 200px;
+  width: auto;
+  display: block;
 }
 
 .footer-links {
