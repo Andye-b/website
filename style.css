@@ -86,14 +86,20 @@ header {
   align-items: center;
   gap: 15px; /* <-- Añade separación entre Login y Search */
 }
-
-.right a {
-  color: var(--text-color); /* <-- Corrige el color del Login */
+.user_links_desktop_only {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* separación entre login y search */
+}
+.user-links-desktop-only a {
+  color: var(--text-color);
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
 
 
