@@ -33,15 +33,16 @@ body {
   z-index: 1100;
 }
 
+/* HEADER */
 header {
   position: fixed;
   width: 100%;
-  top: calc(21px + 5px);
+  top: 26px; /* 21px anuncio + 5px margen */
   left: 0;
   z-index: 1000;
   background-color: transparent;
   transition: background-color 0.3s ease;
-  padding: 20px;
+  padding: 10px 0;
 }
 
 .main-header.scrolled {
@@ -80,7 +81,6 @@ header {
 }
 
 .logo-container {
-  position: relative;
   width: 160px;
   height: 50px;
   overflow: hidden;
@@ -97,8 +97,8 @@ header {
   fill: var(--text-light);
 }
 
-/* NAV */
-nav {
+/* NAVIGATION */
+.nav-links {
   display: flex;
   gap: 15px;
   padding: 8px 30px;
@@ -108,11 +108,11 @@ nav {
   transition: background-color 0.3s ease;
 }
 
-.main-header.scrolled nav {
+.main-header.scrolled .nav-links {
   background-color: #ffffff;
 }
 
-nav a {
+.nav-links a {
   color: var(--text-color);
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
@@ -121,28 +121,30 @@ nav a {
   text-transform: uppercase;
 }
 
-nav a:hover {
+.nav-links a:hover {
   text-decoration: underline;
 }
 
-.hamburger {
+/* HAMBURGER MENU */
+.hamburger-menu {
   display: none;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
+  margin-left: 15px;
   cursor: pointer;
-  margin-left: 20px;
 }
 
-.hamburger div {
+.hamburger-menu .bar {
   width: 25px;
   height: 3px;
   background-color: var(--text-color);
   transition: all 0.3s ease;
 }
 
-nav.active {
-  background-color: #ffffff;
+/* ACTIVE MENU */
+.nav-links.active {
+  background-color: var(--background-light);
   position: absolute;
   top: 60px;
   right: 0;
@@ -152,6 +154,7 @@ nav.active {
   border-radius: 10px;
 }
 
+/* USER ICONS */
 .user-icons a {
   margin-left: 15px;
   color: var(--text-color);
@@ -166,7 +169,7 @@ nav.active {
   vertical-align: middle;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   background-image: url('assets/foto_7.jpeg');
   background-size: cover;
@@ -192,8 +195,8 @@ nav.active {
 .hero-content p {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
-  text-transform: capitalize;
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
 .hero-content button {
@@ -303,7 +306,6 @@ footer {
 .footer-column h4 {
   margin-bottom: 10px;
   font-size: 16px;
-  color: var(--text-light);
 }
 
 .footer-column ul {
@@ -346,7 +348,6 @@ footer {
   margin-top: 30px;
   text-align: center;
   font-size: 12px;
-  color: var(--text-light);
 }
 
 /* RESPONSIVE STYLES */
@@ -355,15 +356,15 @@ footer {
     padding: 0 10px;
   }
 
-  nav {
+  .nav-links {
     display: none;
   }
 
-  nav.active {
+  .nav-links.active {
     display: flex;
   }
 
-  .hamburger {
+  .hamburger-menu {
     display: flex;
   }
 
