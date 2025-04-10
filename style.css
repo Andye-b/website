@@ -82,7 +82,20 @@ header {
 .right {
   justify-content: flex-end;
   flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px; /* <-- Añade separación entre Login y Search */
 }
+
+.right a {
+  color: var(--text-color); /* <-- Corrige el color del Login */
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
 
 .logo-container {
   width: 160px;
