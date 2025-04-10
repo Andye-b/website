@@ -246,11 +246,137 @@ nav a:hover {
   border-radius: 4px;
 }
 
+/* ROOT */
+:root {
+  --background-light: #F0EFED;
+  --accent-color: #82513A;
+  --background-secondary: #DBDCDE;
+  --accent-dark: #474B3C;
+  --background-dark: #383331;
+  --text-color: #383331;
+  --text-light: #F0EFED;
+  --font-main: 'Open Sans', sans-serif;
+}
+
+/* GENERAL */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--background-light);
+  color: var(--text-color);
+  padding-top: 21px;
+}
+
+/* ANNOUNCEMENT BAR */
+.announcement-bar {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  text-align: center;
+  font-size: 16px;
+  padding: 5px 0;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1100;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100%;
+  top: calc(21px + 5px);
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  padding: 20px;
+}
+
+.main-header.scrolled {
+  background-color: var(--background-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* HEADER INNER */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo-container {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.logo-icon {
+  width: 100%;
+  height: 100%;
+  transition: fill 0.5s ease;
+  fill: #000;
+}
+
+.main-header.scrolled .logo-icon {
+  fill: #fff;
+}
+
+/* NAV (PÍLDORA) */
+nav {
+  display: flex;
+  gap: 15px;
+  padding: 8px 30px; /* AUMENTADO para más 'píldora' */
+  border-radius: 30px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease;
+  justify-content: center; /* <<< centra elementos dentro */
+}
+
+.main-header.scrolled nav {
+  background-color: #ffffff;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* USER ICONS */
+.user-icons a {
+  margin-left: 15px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+.user-icons img {
+  height: 20px;
+  vertical-align: middle;
+}
+
 /* FOOTER */
 footer {
   background-color: var(--background-dark);
   color: var(--text-light);
-  padding: 40px 20px 20px 20px; /* Top más grande, bottom más chico */
+  padding: 40px 20px 20px 20px;
   font-size: 14px;
 }
 
@@ -263,19 +389,19 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: stretch; /* <<< CAMBIADO para que logo y links midan igual de alto */
+  align-items: stretch;
   margin-bottom: 30px;
 }
 
 .footer-logo {
   display: flex;
-  align-items: center; /* Centra el logo dentro de su espacio */
+  align-items: center;
   padding-right: 40px;
 }
 
 .footer-logo svg {
   height: 100%;
-  max-height: 220px; /* límite de altura máxima */
+  max-height: 220px;
   width: auto;
   display: block;
 }
@@ -345,7 +471,7 @@ footer {
   color: var(--text-light);
 }
 
-/* RESPONSIVE ajuste para el footer */
+/* RESPONSIVE FOOTER */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -358,7 +484,7 @@ footer {
   }
 
   .footer-logo svg {
-    max-height: 150px; /* Más pequeño en móvil */
+    max-height: 150px;
   }
 
   .footer-links {
