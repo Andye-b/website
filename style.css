@@ -79,29 +79,21 @@ header {
 
 /* Logo */
 .logo-container {
-  max-width: 160px; /* Tamaño máximo en desktop */
-  width: 30vw;      /* Escala en pantallas pequeñas (30% del ancho de viewport) */
-  height: auto;     /* Que el alto se ajuste automáticamente */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  width: 160px;
+  height: 50px;
+  overflow: hidden;
 }
 
 .logo-icon {
   width: 100%;
-  height: auto;
+  height: 100%;
+  transition: fill 0.5s ease;
+  fill: #000000; /* Negro por defecto */
 }
 
-.logo-fill, .logo-icon path {
-  fill: #ffffff;
-  opacity: 1;
-  transition: fill 0.5s ease, opacity 0.5s ease;
-}
-
-.main-header.scrolled .logo-fill, 
-.main-header.scrolled .logo-icon path {
-  fill: #000000;
-  opacity: 0.85;
+.main-header.scrolled .logo-icon {
+  fill: #ffffff; /* Blanco cuando haces scroll */
 }
 
 nav {
