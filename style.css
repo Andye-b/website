@@ -250,7 +250,7 @@ nav a:hover {
 footer {
   background-color: var(--background-dark);
   color: var(--text-light);
-  padding: 40px 20px;
+  padding: 40px 20px 20px 20px; /* Top más grande, bottom más chico */
   font-size: 14px;
 }
 
@@ -263,12 +263,12 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* <<< centrado vertical */
   margin-bottom: 30px;
 }
 
 .footer-logo img {
-  height: 200px;
+  height: 120px;
   margin-right: 40px;
 }
 
@@ -336,3 +336,4 @@ footer {
   font-size: 12px;
   color: var(--text-light);
 }
+
