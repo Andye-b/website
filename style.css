@@ -291,7 +291,7 @@ footer {
 .footer-logo {
   display: flex;
   align-items: center;
-  padding-right: 40px;
+  padding-right: 0px;
 }
 
 .footer-logo svg {
