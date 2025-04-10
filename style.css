@@ -423,7 +423,7 @@ footer {
   .desktop-only {
     display: none;
   }
-/* Responsive: 1 columna en móvil */ {
+/* Responsive: 1 columna en móvil */ 
   .grid-images, .grid-buttons {
     grid-template-columns: 1fr; /* solo una columna */}
   
