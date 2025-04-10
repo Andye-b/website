@@ -86,12 +86,12 @@ header {
   align-items: center;
   gap: 15px; /* <-- Añade separación entre Login y Search */
 }
-.user_links_desktop_only {
+.desktop_only {
   display: flex;
   align-items: center;
   gap: 15px; /* separación entre login y search */
 }
-.user-links-desktop-only a {
+.desktop-only a {
   color: var(--text-color);
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
@@ -409,15 +409,7 @@ footer {
     align-items: center;
     text-align: center;
   }
-}
 
-/* DESKTOP: mostrar login/search normal */
-.desktop-only {
-  display: inline-flex;
-}
-
-/* MOBILE: ocultar login/search normales */
-@media (max-width: 800px) {
   .desktop-only {
     display: none;
   }
