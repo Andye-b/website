@@ -404,3 +404,35 @@ footer {
     margin: 15px 0;
   }
 }
+/* DESKTOP: mostrar login/search normal */
+.desktop-only {
+  display: inline-flex;
+}
+
+/* MOBILE: ocultar login/search normales */
+@media (max-width: 1000px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .user-links-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .user-links-mobile a {
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .user-links-mobile img {
+    height: 20px;
+  }
+}
