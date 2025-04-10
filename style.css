@@ -410,7 +410,7 @@ footer {
 }
 
 /* MOBILE: ocultar login/search normales */
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .desktop-only {
     display: none;
   }
