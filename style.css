@@ -248,7 +248,7 @@ header {
   gap: 10px;
 }
 
-.grid-images, .visit-button {
+.grid-images, {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -256,6 +256,7 @@ header {
 }
 
 .visit-button {
+  width: 100%
   background-color: white;
   border: 1px solid var(--background-secondary);
   color: var(--text-color);
