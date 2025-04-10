@@ -359,7 +359,7 @@ footer {
 }
 
 /* RESPONSIVE STYLES */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .header-inner {
     padding: 0 10px;
   }
