@@ -200,32 +200,6 @@
     </div>
   </footer>
 
-
-  <!-- Script para scroll -->
-
-
-<script>
-// Botón de hamburguesa para abrir/cerrar menú
-const hamburger = document.querySelector('.hamburger-menu');
-const navLinks = document.querySelector('.nav-links');
-
-if (hamburger) {
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-}
-
-// Efecto de cambiar fondo del header al hacer scroll
-window.addEventListener('scroll', function () {
-  const header = document.querySelector('.main-header'); // <-- CAMBIADO
-  if (window.scrollY > window.innerHeight * 0.7) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
-</script>
-
 </body>
 </html>
 
