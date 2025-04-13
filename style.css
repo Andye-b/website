@@ -375,7 +375,8 @@ footer {
 
 /* Estilo para páginas sin hero */
 .main-header.solid-bg {
-  background-color: rgba(0, 0, 0, 0.9); /* O el color que prefieras */
+  background-color: var(--background-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* O el color que prefieras */
 }
 
 /* En páginas sin hero, agrega padding-top al body */
