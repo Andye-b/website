@@ -375,15 +375,13 @@ footer {
 
 /* Estilo para páginas sin hero */
 .main-header.solid-bg {
-  background-color: var(--background-light);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.9); /* O el color que prefieras */
 }
 
-/* En páginas sin hero, agrega padding-top al body para evitar que el contenido se oculte */
+/* En páginas sin hero, agrega padding-top al body */
 body.no-hero {
-  padding-top: 80px; /* Ajusta esto a la altura de tu header */
+  padding-top: 120px; /* Ajusta a la altura de tu header */
 }
-
 /* RESPONSIVE STYLES */
 @media (max-width: 800px) {
   .header-inner {
