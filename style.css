@@ -441,3 +441,11 @@ footer {
 .waiver {
   padding: 60px;
 }
+.waiver a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+}
