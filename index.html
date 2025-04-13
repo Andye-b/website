@@ -63,7 +63,6 @@
       <a href="#buscar" class="desktop-only"><img src="assets/search-icon.svg" alt="Buscar"></a>
     
     </div>
-    </div>
 </header>
 
   <!-- Hero principal -->
@@ -182,38 +181,28 @@
 
 
   <!-- Script para scroll -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Botón de hamburguesa para abrir/cerrar menú
-  const hamburger = document.querySelector('.hamburger-menu');
-  const navLinks = document.querySelector('.nav-links');
-  if (hamburger) {
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  }
 
-  // Detectar si hay hero section y ajustar el header en consecuencia
-  const header = document.querySelector('.main-header');
-  const heroSection = document.querySelector('.hero-section'); // Ajusta este selector a la clase de tu hero
-  const body = document.body;
-  
-  // Si no hay hero section, agrega una clase al body y fondo sólido al header
-  if (!heroSection) {
-    body.classList.add('no-hero');
-    header.classList.add('solid-bg'); // Agrega fondo sólido inmediatamente
+
+<script>
+// Botón de hamburguesa para abrir/cerrar menú
+const hamburger = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+}
+
+// Efecto de cambiar fondo del header al hacer scroll
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('.main-header'); // <-- CAMBIADO
+  if (window.scrollY > window.innerHeight * 0.7) {
+    header.classList.add('scrolled');
   } else {
-    // Si hay hero, mantén el comportamiento original de scroll
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > window.innerHeight * 0.7) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
+    header.classList.remove('scrolled');
   }
 });
-
 </script>
 
 </body>
