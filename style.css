@@ -373,6 +373,21 @@ footer {
   font-size: 12px;
 }
 
+/* WAIVER */
+
+.waiver {
+  padding: 60px;
+  margin-top: 20px;
+}
+.waiver a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
 /* RESPONSIVE STYLES */
 @media (max-width: 800px) {
   .header-inner {
@@ -436,16 +451,3 @@ footer {
   }
 }
 
-      /* WAIVER */
-
-.waiver {
-  padding: 60px;
-}
-.waiver a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 10px;
-  text-transform: uppercase;
-}
