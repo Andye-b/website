@@ -53,32 +53,82 @@
   <h1>Waiver de Responsabilidad</h1>
 </header>
 
-<div class="container">
-  <p>
-    En relación a los servicios y actividades proporcionados por Parque Serra, sus representantes y todas las demás personas o entidades que actúen en su nombre o su representación (“las partes exoneradas”) yo &lt;&lt;Rider&gt;&gt;:
-  </p>
+<section id="waiver" class="container">
+  <h1>Acuerdo de Liberación de Responsabilidad y Política de Privacidad</h1>
+  
+  <p>Bienvenido a Parque Serra. Antes de participar en nuestras actividades, es necesario aceptar nuestro Acuerdo de Liberación de Responsabilidad y nuestra Política de Privacidad.</p>
 
-  <p>
-    Reconozco que realizar cualquier tipo de actividad en las inmediaciones o alrededores de Parque Serra se consideran actividades peligrosas y plantean la posibilidad de cualquier tipo de accidente o lesión, incluso de muerte, parálisis permanente o fracturas y heridas graves.
-  </p>
+  <div class="terms-box">
+    <h2>1. Acuerdo de Liberación de Responsabilidad</h2>
 
-  <p>
-    Libero voluntariamente a Parque Serra y a las Partes Exoneradas de cualquier reclamación o acción que esté relacionada con mi participación en las actividades. También doy mi consentimiento para el uso de fotografías o videos.
-  </p>
+    <p>Al registrarme y utilizar las instalaciones de <strong>Parque Serra</strong>, reconozco y acepto lo siguiente:</p>
 
-  <p>
-    Certifico que tengo seguro de gastos médicos o acepto asumir todos los costos relacionados. Estoy de acuerdo en aceptar y asumir todos los riesgos eximiendo a Parque Serra de toda responsabilidad.
-  </p>
+    <h3>Asunción de Riesgos</h3>
+    <p>Reconozco que las actividades realizadas en Parque Serra implican riesgos inherentes, incluyendo, pero no limitándose a, caídas, colisiones, lesiones físicas, enfermedades o daños personales. Asumo voluntariamente todos los riesgos asociados a mi participación.</p>
 
-  <p>
-    Nombre: &lt;&lt;Rider&gt;&gt;<br>
-    Fecha de nacimiento: &lt;&lt;Fecha de Nacimiento&gt;&gt;<br>
-    Teléfono: &lt;&lt;teléfono&gt;&gt;<br>
-    Correo electrónico: &lt;&lt;correo electrónico&gt;&gt;
-  </p>
+    <h3>Liberación de Responsabilidad</h3>
+    <p>Libero expresamente a <strong>Parques Extremos Querétaro S.A. de C.V.</strong>, a sus directivos, empleados, afiliados y representantes de cualquier responsabilidad por daños, pérdidas o lesiones que pueda sufrir como resultado de mi participación en actividades dentro de las instalaciones, <strong>salvo en casos de dolo o culpa grave</strong>.</p>
 
-  <button onclick="alert('Gracias por aceptar el waiver!')">Acepto los términos y condiciones</button>
-</div>
+    <h3>Cumplimiento de Normas</h3>
+    <p>Me comprometo a respetar las normas de uso y seguridad establecidas por Parque Serra y a seguir las instrucciones del personal autorizado en todo momento.</p>
+
+    <h3>Atención Médica de Emergencia</h3>
+    <p>En caso de accidente o emergencia, autorizo a que se me brinde atención médica de primeros auxilios, y asumo cualquier gasto relacionado con dicha atención.</p>
+
+    <h3>Representación de Menores</h3>
+    <p>En caso de registrar a un menor de edad, declaro que soy su padre/madre o tutor legal y que acepto los términos anteriores en su nombre.</p>
+
+    <h2>2. Política de Privacidad y Uso de Datos Personales</h2>
+
+    <h3>Responsable del tratamiento de datos</h3>
+    <p><strong>Parques Extremos Querétaro S.A. de C.V.</strong> es el responsable del tratamiento de sus datos personales.</p>
+
+    <h3>Datos recopilados</h3>
+    <p>Recolectamos: nombre completo, fecha de nacimiento, contactos de emergencia, datos de salud relevantes (como alergias), correo electrónico, y cualquier información adicional proporcionada voluntariamente.</p>
+
+    <h3>Finalidad del tratamiento</h3>
+    <ul>
+      <li>Gestión de registros de acceso y participación en actividades.</li>
+      <li>Contacto en caso de emergencia.</li>
+      <li>Comunicación sobre servicios, actividades, clases y eventos de Parque Serra.</li>
+      <li>Cumplimiento de obligaciones legales.</li>
+    </ul>
+
+    <h3>Conservación de datos</h3>
+    <p>Sus datos serán conservados durante la vigencia de su relación con Parque Serra y hasta por un máximo de cinco (5) años posteriores a su última actividad registrada, salvo disposición legal en contrario.</p>
+
+    <h3>Derechos ARCO/GDPR</h3>
+    <p>Usted tiene derecho a:</p>
+    <ul>
+      <li><strong>Acceso:</strong> Conocer qué datos personales tenemos sobre usted.</li>
+      <li><strong>Rectificación:</strong> Corregir sus datos si son inexactos o incompletos.</li>
+      <li><strong>Cancelación:</strong> Solicitar la eliminación de sus datos cuando ya no sean necesarios para las finalidades establecidas.</li>
+      <li><strong>Oposición:</strong> Oponerse al tratamiento de sus datos para fines específicos.</li>
+      <li><strong>Portabilidad:</strong> Solicitar la entrega de sus datos en un formato digital estructurado.</li>
+    </ul>
+
+    <p>Para ejercer cualquiera de estos derechos, puede contactarnos en: <a href="mailto:privacidad@parqueserra.com">privacidad@parqueserra.com</a>.</p>
+
+    <h3>Medidas de Seguridad</h3>
+    <p>Hemos implementado medidas técnicas, administrativas y físicas necesarias para proteger sus datos personales contra daño, pérdida, alteración, destrucción o el uso, acceso o tratamiento no autorizado.</p>
+
+    <h3>Transferencia de datos</h3>
+    <p>Sus datos no serán compartidos con terceros ajenos a Parque Serra sin su consentimiento, salvo cuando sea requerido por ley.</p>
+
+  </div>
+
+  <form id="waiver-form" action="/submit-waiver" method="POST">
+    <div class="checkbox-container">
+      <input type="checkbox" id="accept" name="accept" required>
+      <label for="accept">
+        He leído y acepto el <a href="#waiver">Acuerdo de Liberación de Responsabilidad</a> y la <a href="#waiver">Política de Privacidad</a> de Parque Serra.
+      </label>
+    </div>
+
+    <button type="submit" class="button">Aceptar y Continuar</button>
+  </form>
+</section>
+
 
 <footer>
   <p>Parque Serra &copy; 2025. Todos los derechos reservados.</p>
@@ -86,3 +136,4 @@
 
 </body>
 </html>
+
